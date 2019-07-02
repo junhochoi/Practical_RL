@@ -29,35 +29,33 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu trusty-backports main restricted 
     ln -s /usr/bin/swig3.0 /usr/bin/swig
 
 RUN pip install --upgrade pip==9.0.3 && \
-    pip install --upgrade numpy scipy && \
-    pip install --upgrade sklearn \
+    pip install --upgrade numpy scipy==1.2.2 sklearn scikit-image \
                            jupyter \
                            tqdm \
                            graphviz \
-                           gym gym[box2d] gym[atari] \
+                           gym==0.10.11 gym[atari]==0.10.11 atari_py==0.1.7 gym[box2d] \
                            matplotlib \
-                           seaborn && \
-    pip install --upgrade https://github.com/Theano/Theano/archive/master.zip \
+                           seaborn \
+                           https://github.com/Theano/Theano/archive/master.zip \
                            https://github.com/Lasagne/Lasagne/archive/master.zip \
                            https://github.com/yandexdataschool/AgentNet/archive/master.zip \
                            tensorflow \
                            http://download.pytorch.org/whl/cu80/torch-0.3.0.post4-cp27-cp27mu-linux_x86_64.whl \
                            torchvision \
-                           keras     
+                           keras
                            
 RUN pip install --upgrade  gym_pull ppaquette-gym-doom
 
 
 RUN pip3 install --upgrade pip==9.0.3 && \
-    pip3 install --upgrade numpy scipy && \
-    pip3 install --upgrade sklearn \
+    pip3 install --upgrade numpy scipy==1.2.2 sklearn scikit-image \
                            jupyter \
                            tqdm \
                            graphviz \
-                           gym gym[box2d] gym[atari] \
+                           gym==0.10.11 gym[atari]==0.10.11 atari_py==0.1.7 gym[box2d] \
                            matplotlib \
-                           seaborn && \
-    pip3 install --upgrade https://github.com/Theano/Theano/archive/master.zip \
+                           seaborn \
+                           https://github.com/Theano/Theano/archive/master.zip \
                            https://github.com/Lasagne/Lasagne/archive/master.zip \
                            https://github.com/yandexdataschool/AgentNet/archive/master.zip \
                            http://download.pytorch.org/whl/cu80/torch-0.3.0.post4-cp35-cp35m-linux_x86_64.whl \
